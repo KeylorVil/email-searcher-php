@@ -1,4 +1,4 @@
-export default class NavController {
+export default class Controller {
     constructor(NavView, NavModel) {
         this.NavView = NavView;
         this.NavModel = NavModel;

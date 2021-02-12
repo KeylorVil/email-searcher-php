@@ -1,4 +1,4 @@
-export default class NavModel {
+export default class MainModel {
     /* fetch JSON with Cards title's and description's texts */
     async fetchCardsData() {
         const response = await fetch('./src/json/cards.json')
@@ -10,5 +10,4 @@ export default class NavModel {
         let data = await this.fetchCardsData();
         return data;
     }
-    
 }

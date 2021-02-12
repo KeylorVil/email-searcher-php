@@ -1,4 +1,4 @@
-export default class NavView {
+export default class MainView {
     init(data) {
         this.render(data);
     }
