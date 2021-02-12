@@ -1,4 +1,5 @@
 export default class Nav extends HTMLElement {
+    /* cards web component */
     static get observedAttributes() {
         return ['number', 'title', 'description'];
     }
@@ -17,67 +18,7 @@ export default class Nav extends HTMLElement {
         const _style = document.createElement('style');
 
         /* Shadow dom style */
-        _style.innerHTML = `
-        span {
-            color: var(--span-color);
-        }
-
-        .card {
-            display: flex;
-        }
-        
-        .card.first-card {
-            margin-top: 0px;
-        }
-        
-        .card .number {
-            background-color: var(--cards-background-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-        }
-        
-        .card .number span {
-            font-weight: bold;
-        }
-        
-        .card .right-text h2 {
-            font-weight: bold;
-            color: var(--title-color);
-            letter-spacing: 0;
-        }
-        
-        .card .right-text p {
-            color: var(--text-color);
-            line-height: 24px;
-            margin-top: 8px;
-        }
-
-        /*Mobile*/
-        .card {
-            margin-top: 15px;
-        }
-    
-        .card .number {
-            width: 50.4px;
-            height: 50.4px;
-            min-width: 50.4px;
-            margin-right: 10.6px;
-        }
-    
-        .card .number span {
-            font-size: 26.88px;
-        }
-    
-        .card .right-text h2 {
-            font-size: 20px;
-        }
-    
-        .card .right-text p {
-            font-size: 16px;
-        }
-        `;
+        _style.innerHTML = `@import './src/css/components/cards.css'`;
 
         /* Append the card html and style to the shadowdom */
         this.shadowRoot.appendChild(_style);
