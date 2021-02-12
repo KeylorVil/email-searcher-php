@@ -39,3 +39,8 @@ h1 {
     font-family: helveticaneue;
     font-weight: bold;
 }
+
+/* cards */
+#main .cards {
+    display: flex;
+}

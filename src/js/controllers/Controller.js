@@ -4,7 +4,8 @@ export default class NavController {
         this.NavModel = NavModel;
     }
 
-    init() {
-        this.NavView.init();
+    async init() {
+        let data = await this.NavModel.getData();
+        this.NavView.init(data);
     }
 }

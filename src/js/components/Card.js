@@ -1,5 +1,4 @@
 export default class Nav extends HTMLElement {
-
     static get observedAttributes() {
         return ['number', 'title', 'description'];
     }
@@ -17,7 +16,7 @@ export default class Nav extends HTMLElement {
         const _template = this.htmlTemplate();
         const _style = document.createElement('style');
 
-        //Shadow dom style
+        /* Shadow dom style */
         _style.innerHTML = `
         span {
             color: var(--span-color);
@@ -80,6 +79,7 @@ export default class Nav extends HTMLElement {
         }
         `;
 
+        /* Append the card html and style to the shadowdom */
         this.shadowRoot.appendChild(_style);
         this.shadowRoot.appendChild(_template);
     }

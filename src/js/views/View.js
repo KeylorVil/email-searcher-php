@@ -1,36 +1,25 @@
 export default class NavView {
-    init() {
-        this.render();
+    init(data) {
+        this.render(data);
     }
 
-    async render() {
+    render(data) {
         const main = window.main;
         main.innerHTML = '';
-        const cardsData = await this.getCardsData();
-        main.appendChild(this.createCards(cardsData))
-    }
-
-    async fetchCardsData() {
-        const response = await fetch('./src/json/cards.json')
-            .then(response => response.json())
-        return response;
-    }
-
-    async getCardsData() {
-        const result = await this.fetchCardsData();
-        return result;
+        main.appendChild(this.createCards(data))
     }
 
     createCards(data) {
-
+        /* Create HTML for cards */
         let cards = document.createElement('div');
         cards.setAttribute('class', 'cards');
 
-        let firstColumn = document.createElement('div');
-        firstColumn.setAttribute('class', 'col first-col');
+        let column = document.createElement('div');
+        column.setAttribute('class', 'col');
 
-        cards.appendChild(firstColumn);
+        cards.appendChild(column);
 
+        /* Creates several cards based on /json/cards.json information */
         let customCards = [];
         data.forEach((item, index) => {
             let card = document.createElement('custom-card');
@@ -40,8 +29,9 @@ export default class NavView {
             customCards.push(card);
         });
 
+        /* Append all the cards on a .col element */
         customCards.forEach((item) => {
-            firstColumn.appendChild(item);
+            column.appendChild(item);
         });
         return cards;
     }
