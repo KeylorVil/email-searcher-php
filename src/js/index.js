@@ -1,8 +1,11 @@
-import NavView from './views/View.js';
-import NavModel from './models/Model.js';
-import NavController from './controllers/Controller.js';
+import View from './views/View.js';
+import Model from './models/Model.js';
+import Controller from './controllers/Controller.js';
+import Card from './components/Card.js';
 
-const navView = new NavView();
-const navModel = new NavModel();
-const nav = new NavController(navView, navModel);
-nav.init();
+const view = new View();
+const model = new Model();
+const controller = new Controller(view, model);
+// controller.init();
+
+customElements.define('custom-card', Card);
