@@ -1,18 +1,48 @@
 export default class NavView {
-    init(data) {
-        this.renderEmailData(data);
+    init() {
+        this.render();
     }
-    renderEmailData(data) {
-        // cache #dataList DOM 
-        const $dataListUI = window.dataList;
-        // clear HTML from the DOM 
-        $dataListUI.innerHTML = '';
-        for (let i = 0, len = data.length; i < len; i++) {
-            let $li = document.createElement('li');
-            $li.setAttribute('class', 'item');
-            $li.setAttribute('data-index', i);
-            $li.innerHTML = `${data[i]['email']},${data[i]['first_name']},${data[i]['last_name']}`;
-            $dataListUI.append($li);
-        }
+
+    async render() {
+        const main = window.main;
+        main.innerHTML = '';
+        const cardsData = await this.getCardsData();
+        main.appendChild(this.createCards(cardsData))
+    }
+
+    async fetchCardsData() {
+        const response = await fetch('./src/json/cards.json')
+            .then(response => response.json())
+        return response;
+    }
+
+    async getCardsData() {
+        const result = await this.fetchCardsData();
+        return result;
+    }
+
+    createCards(data) {
+
+        let cards = document.createElement('div');
+        cards.setAttribute('class', 'cards');
+
+        let firstColumn = document.createElement('div');
+        firstColumn.setAttribute('class', 'col first-col');
+
+        cards.appendChild(firstColumn);
+
+        let customCards = [];
+        data.forEach((item, index) => {
+            let card = document.createElement('custom-card');
+            card.setAttribute('number', index+1);
+            card.setAttribute('title', item.title);
+            card.setAttribute('description', item.description);
+            customCards.push(card);
+        });
+
+        customCards.forEach((item) => {
+            firstColumn.appendChild(item);
+        });
+        return cards;
     }
 }

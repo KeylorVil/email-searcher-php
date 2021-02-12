@@ -5,6 +5,6 @@ export default class NavController {
     }
 
     init() {
-        this.NavView.init(this.NavModel.getData());
+        this.NavView.init();
     }
 }
