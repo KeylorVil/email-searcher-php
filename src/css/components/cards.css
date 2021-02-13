@@ -35,25 +35,84 @@ span {
 }
 
 /*Mobile*/
-.card {
-    margin-top: 15px;
+@media (min-width: 320px) and (max-width: 767px) {
+    .card {
+        margin-top: 15px;
+    }
+    
+    .card .number {
+        width: 50.4px;
+        height: 50.4px;
+        min-width: 50.4px;
+        margin-right: 10.6px;
+    }
+    
+    .card .number span {
+        font-size: 26.88px;
+    }
+    
+    .card .right-text h2 {
+        font-size: 20px;
+    }
+    
+    .card .right-text p {
+        font-size: 16px;
+    }
 }
 
-.card .number {
-    width: 50.4px;
-    height: 50.4px;
-    min-width: 50.4px;
-    margin-right: 10.6px;
+/* Mobile landscape only */
+@media (min-width: 481px) and (max-width: 767px) {
+    .card.fourth-card {
+        margin-top: 0px;
+    }
 }
 
-.card .number span {
-    font-size: 26.88px;
+/* Tablet & Desktop Shared */
+@media (min-width: 768px) {
+    .card.fourth-card {
+        margin-top: 0px;
+    }
+
+    .card .number {
+        margin-right: 20px;
+    }
 }
 
-.card .right-text h2 {
-    font-size: 20px;
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        margin-top: 20px;
+    }
+
+    .card .number {
+        width: 63px;
+        height: 63px;
+        min-width: 63px;
+    }
 }
 
-.card .right-text p {
-    font-size: 16px;
+/* Desktop */
+@media (min-width: 1025px) {
+    .card {
+        margin-top: 30px;
+    }
+
+    .card .number {
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+    }
+
+    .card .number span {
+        font-size: 48px;
+    }
+
+    .card .right-text h2 {
+        font-size: 22px;
+    }
+
+    .card .right-text p {
+        max-width: 380px;
+        font-size: 18px;
+    }
 }
