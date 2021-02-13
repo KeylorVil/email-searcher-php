@@ -10,7 +10,7 @@ export default class LoaderView {
         loader.style.width = `${main.offsetWidth}px`;
         loader.style.height = `${main.offsetHeight}px`;
         loader.appendChild(document.createElement('custom-loader'));
-        loader.style.display = "block";
+        loader.style.display = "flex";
     }
 
     clean() {
