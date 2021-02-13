@@ -114,6 +114,10 @@
     display: block;
     position: absolute;
     opacity: 0;
+    top: unset!important;
+    left: unset!important;
+    margin-top: -4rem;
+    margin-left: 0.8rem;
 }
 
 .input-text:placeholder-shown+.input-label {
@@ -126,8 +130,6 @@
     visibility: visible;
     z-index: 1;
     opacity: 1;
-    top: 8px;
-    left: 12px;
     /* text style */
     font-weight: bold;
     color: #9B9B9B;
