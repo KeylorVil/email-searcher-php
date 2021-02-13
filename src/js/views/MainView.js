@@ -1,4 +1,5 @@
 export default class MainView {
+    
     init(data) {
         this.render(data);
     }
@@ -6,7 +7,8 @@ export default class MainView {
     render(data) {
         const main = window.main;
         main.innerHTML = '';
-        main.appendChild(this.createCards(data))
+        main.appendChild(document.createElement('custom-search'));
+        main.appendChild(this.createCards(data));
     }
 
     createCards(data) {
@@ -35,5 +37,15 @@ export default class MainView {
             }
         });
         return cards;
+    }
+
+    bindSearch(handler, model) {
+        let button = document.querySelector('custom-search').shadowRoot.querySelector('#searchBtn');
+        button.addEventListener('click', e => {
+            e.preventDefault;
+            let emailText = document.querySelector('custom-search').shadowRoot.querySelector('#emailInput');
+            let email = {email: emailText.value};
+            handler(email, model);
+        })
     }
 }
