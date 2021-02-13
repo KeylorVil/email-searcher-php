@@ -1,0 +1,13 @@
+body {
+    font-family: var(--default-font);
+    font-weight: normal;
+}
+
+body p {
+    font-size: 18px;
+}
+
+h1 {
+    font-family: var(--default-font);
+    font-weight: bold;
+}

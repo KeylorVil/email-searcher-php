@@ -19,8 +19,9 @@ export default class Nav extends HTMLElement {
 
         /* Shadow dom style */
         _style.innerHTML = `
+        @import './src/css/reset.css';
+        @import './src/css/components/general.css';
         @import './src/css/components/cards.css';
-        @import './src/css/normalize/sections.css';
         `;
 
         /* Append the card html and style to the shadowdom */

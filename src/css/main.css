@@ -1,8 +1,8 @@
-/* General */
-/* Navbar */
-
 /* main content */
-/* cards */
+#search {
+    width: 100%;
+}
+
 .main .cards {
     display: flex;
 }

@@ -1,4 +1,26 @@
+@font-face {
+    font-family: helveticaneue;
+    src: url(../fonts/helveticaneue/helveticaneu-regular.ttf);
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: helveticaneue;
+    src: url(../fonts/helveticaneue/helveticaneu-bold.ttf);
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: lato;
+    src: url(../fonts/lato/lato-bold.ttf);
+    font-weight: bold;
+    font-display: swap;
+}
+
 :root {
+    --default-font: helveticaneue;
     --span-color: #F6BC25;
     --nav-background-color: #004A80;
     --cards-background-color: #004A80;
@@ -6,29 +28,8 @@
     --text-color: #000000;
 }
 
-@font-face {
-    font-family: helveticaneue;
-    src: url(/src/fonts/helveticaneue/helveticaneu-regular.ttf);
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: helveticaneue;
-    src: url(/src/fonts/helveticaneue/helveticaneu-bold.ttf);
-    font-weight: bold;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: lato;
-    src: url(/src/fonts/lato/lato-bold.ttf);
-    font-weight: bold;
-    font-display: swap;
-}
-
-body /deep/ {
-    font-family: helveticaneue;
+body {
+    font-family: var(--default-font);
     font-weight: normal;
 }
 
@@ -37,6 +38,6 @@ body p {
 }
 
 h1 {
-    font-family: helveticaneue;
+    font-family: var(--default-font);
     font-weight: bold;
 }
