@@ -56,19 +56,8 @@
     }
 }
 
-/* Mobile landscape only */
-@media (min-width: 481px) and (max-width: 767px) {
-    .card.fourth-card {
-        margin-top: 0px;
-    }
-}
-
 /* Tablet & Desktop Shared */
 @media (min-width: 768px) {
-    .card.fourth-card {
-        margin-top: 0px;
-    }
-
     .card .number {
         margin-right: 20px;
     }
@@ -84,6 +73,10 @@
         width: 63px;
         height: 63px;
         min-width: 63px;
+    }
+
+    .card .number span {
+        font-size: 33.6px;
     }
 }
 
