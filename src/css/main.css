@@ -11,13 +11,13 @@
     text-align: center;
 }
 
-.main>p {
+.main #cards>p  {
     color: #4A4A4A;
     letter-spacing: 0;
     line-height: 28px;
 }
 
-.main .cards {
+.main #cards .cards {
     display: flex;
 }
 
@@ -27,12 +27,15 @@
         font-size: 38px;
     }
 
-    .main>p {
+    .main #cards>p  {
         margin-top: 15px;
     }
 
-    .main .cards {
+    .main #cards {
         padding: 30px 15px 30px 15px;
+    }
+
+    .main #cards .cards {
         flex-direction: column;
         margin-top: 20px;
     }
@@ -40,7 +43,7 @@
 
 /* Mobile landscape only */
 @media (min-width: 481px) and (max-width: 767px) {
-    .main .cards {
+    .main #cards .cards {
         flex-direction: row;
     }
 }
@@ -53,7 +56,7 @@
         align-items: center;
     }
 
-    .main .cards {
+    .main #cards .cards {
         flex-direction: row;
         justify-content: center;
     }
@@ -65,18 +68,21 @@
         font-size: 48px;
     }
 
-    .main>p {
+    .main #cards>p  {
         margin-top: 20px;
         font-size: 20px;
         max-width: 718px;
     }
 
-    .main .cards {
+    .main #cards {
         padding: 30px 25px 30px 25px;
+    }
+
+    .main #cards .cards {
         margin-top: 30px;
     }
 
-    .main .cards .col.first-col {
+    .main #cards .cards .col.first-col {
         margin-right: 24px;
     }
 }
@@ -87,18 +93,21 @@
         font-size: 52px;
     }
 
-    .main>p {
+    .main #cards>p  {
         margin-top: 20px;
         font-size: 22px;
         max-width: 980px;
     }
-
-    .main .cards {
+    
+    .main #cards {
         padding: 30px 25px 30px 25px;
+    }
+
+    .main #cards .cards {
         margin-top: 40px;
     }
 
-    .main .cards .col.first-col {
+    .main #cards .cards .col.first-col {
         margin-right: 60px;
     }
 }
