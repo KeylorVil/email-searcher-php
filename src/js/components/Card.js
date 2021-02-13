@@ -29,20 +29,16 @@ export default class Nav extends HTMLElement {
     }
 
     htmlTemplate() {
-        /* destructuring attributes */
-        const number = this.getAttribute('number');
-        const title = this.getAttribute('title');
-        const description = this.getAttribute('description');
         const _template = document.createElement('div');
         _template.setAttribute('class', 'card');
 
         _template.innerHTML = `
         <div class="number">
-            <span>${number}</span>
+            <span>${this.getAttribute('number')}</span>
         </div>
         <div class="right-text">
-            <h2>${title}</h2>
-            <p>${description}</p>
+            <h2>${this.getAttribute('title')}</h2>
+            <p>${this.getAttribute('description')}</p>
         </div>
         `;
         return _template;

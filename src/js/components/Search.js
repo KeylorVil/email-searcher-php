@@ -1,4 +1,6 @@
 export default class Search extends HTMLElement {
+    /* search web component */
+
     constructor() {
         super();
     }
@@ -22,10 +24,6 @@ export default class Search extends HTMLElement {
         }
 
         htmlTemplate() {
-            /* destructuring attributes */
-            const number = this.getAttribute('number');
-            const title = this.getAttribute('title');
-            const description = this.getAttribute('description');
             const _template = document.createElement('div');
             _template.setAttribute('class', 'form');
     

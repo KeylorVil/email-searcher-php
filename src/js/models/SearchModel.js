@@ -1,6 +1,6 @@
 export default class SearchModel {
     /* Fetch https://ltv-data-api.herokuapp.com/api/v1/records.json?email= with custom email*/
-    /* Posible success values: jonsmith@example.com, jonsmith@example.com, jonsmith@example.com */
+    /* Posible success values: jonsmith@example.com, janesmith@example.com, doesmith@example.com */
     async fetchApi(email) {
         const response = await fetch('./src/php/search.php', {
             method: 'POST',
