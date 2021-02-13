@@ -11,8 +11,9 @@ export default class ResultView {
         result.innerHTML = '';
         cards.innerHTML = '';
 
-        let foo = document.createElement('h1');
-        foo.innerHTML = `${data.first_name}`;
+        let foo = document.createElement('custom-result');
+        console.log(data);
+        foo.setAttribute('info', JSON.stringify(data));
         result.appendChild(foo);
     }
 }

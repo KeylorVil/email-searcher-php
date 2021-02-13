@@ -20,7 +20,6 @@ export default class SearchView {
         const handler = handleSearch;
         let button = document.querySelector('custom-search').shadowRoot.querySelector('#searchBtn');
         button.addEventListener('click', e => {
-            console.log('hey');
             e.preventDefault;
             let emailText = document.querySelector('custom-search').shadowRoot.querySelector('#emailInput');
             let email = {

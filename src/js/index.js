@@ -2,6 +2,7 @@
 import Nav from './components/Nav.js';
 import Card from './components/Card.js';
 import Search from './components/Search.js';
+import Result from './components/Result.js';
 
 /* MVC */
 import NavView from './views/NavView.js';
@@ -18,6 +19,8 @@ customElements.define('custom-card', Card);
 customElements.define('custom-nav', Nav);
 /* search custom element */
 customElements.define('custom-search', Search)
+/* email search result custom element */
+customElements.define('custom-result', Result);
 
 const searchView = new SearchView();
 const navView = new NavView();

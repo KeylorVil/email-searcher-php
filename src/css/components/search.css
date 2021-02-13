@@ -187,6 +187,11 @@
         font-size: 14px;
         top: -18px;
     }
+
+    .input-label {
+        margin-top: -4.2rem;
+        margin-left: 0.7rem;
+    }
 }
 
 /* Tablet & Desktop Shared */
