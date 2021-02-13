@@ -8,6 +8,12 @@ export default class CardsView {
         const cards = window.cards;
         /* cleaning dom */
         cards.innerHTML = '';
+        let title = document.createElement('h1');
+        let text = document.createElement('p');
+        title.innerHTML = 'Reverse Email Lookup';
+        text.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+        cards.appendChild(title);
+        cards.appendChild(text);
         cards.appendChild(this.createCards(data));
     }
 
