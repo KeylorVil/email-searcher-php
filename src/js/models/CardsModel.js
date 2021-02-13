@@ -1,4 +1,4 @@
-export default class MainModel {
+export default class CardsModel {
     /* fetch JSON with Cards title's and description's texts */
     async fetchCardsData() {
         const response = await fetch('./src/json/cards.json')

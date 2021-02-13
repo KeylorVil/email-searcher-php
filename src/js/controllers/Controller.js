@@ -2,26 +2,26 @@ export default class Controller {
     constructor
         ({
             SearchView = 0,
-            MainView = 0,
-            MainModel = 0,
+            CardsView = 0,
+            CardsModel = 0,
             NavView = 0,
             SearchModel = 0,
             ResultView = 0
         }) {
             this.SearchView = SearchView;
-            this.MainView = MainView;
-            this.MainModel = MainModel;
+            this.CardsView = CardsView;
+            this.CardsModel = CardsModel;
             this.NavView = NavView;
             this.SearchModel = SearchModel;
             this.ResultView = ResultView;
         }
 
     async init() {
-        let data = await this.MainModel.getData();
+        let data = await this.CardsModel.getData();
         // let foo = await this.SearchModel.getData({email: "doesmith@example.com"});
         this.NavView.init();
         this.SearchView.init();
-        this.MainView.init(data);
+        this.CardsView.init(data);
         const {
             handleSearch,
             SearchModel,

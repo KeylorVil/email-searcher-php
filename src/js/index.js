@@ -6,9 +6,9 @@ import Search from './components/Search.js';
 /* MVC */
 import NavView from './views/NavView.js';
 import SearchView from './views/SearchView.js';
-import MainView from './views/MainView.js';
+import CardsView from './views/CardsView.js';
 import ResultView from './views/ResultView.js';
-import MainModel from './models/MainModel.js';
+import CardsModel from './models/CardsModel.js';
 import SearchModel from './models/SearchModel.js';
 import Controller from './controllers/Controller.js';
 
@@ -21,14 +21,14 @@ customElements.define('custom-search', Search)
 
 const searchView = new SearchView();
 const navView = new NavView();
-const mainView = new MainView();
+const cardsView = new CardsView();
 const resultView = new ResultView();
-const mainModel = new MainModel();
+const cardsModel = new CardsModel();
 const searchModel = new SearchModel();
 const controller = new Controller({
     SearchView: searchView,
-    MainView: mainView,
-    MainModel: mainModel,
+    CardsView: cardsView,
+    CardsModel: cardsModel,
     NavView: navView,
     SearchModel: searchModel,
     ResultView: resultView

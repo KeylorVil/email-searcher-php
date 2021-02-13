@@ -6,10 +6,10 @@ export default class ResultView {
 
     render(data) {
         const result = window.result;
-        const main = window.main;
+        const cards = window.cards;
         /* cleaning dom */
         result.innerHTML = '';
-        main.innerHTML = '';
+        cards.innerHTML = '';
 
         let foo = document.createElement('h1');
         foo.innerHTML = `${data.first_name}`;

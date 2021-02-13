@@ -1,14 +1,14 @@
-export default class MainView {
+export default class CardsView {
 
     init(data) {
         this.render(data);
     }
 
     render(data) {
-        const main = window.main;
+        const cards = window.cards;
         /* cleaning dom */
-        main.innerHTML = '';
-        main.appendChild(this.createCards(data));
+        cards.innerHTML = '';
+        cards.appendChild(this.createCards(data));
     }
 
     createCards(data) {
