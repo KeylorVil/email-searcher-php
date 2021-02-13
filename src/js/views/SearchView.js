@@ -16,11 +16,13 @@ export default class SearchView {
     }
 
     bindSearch({
-        handleSearch = 0,
-        SearchModel = 0,
-        ResultView = 0,
-        SearchView = 0
+        handleSearch,
+        SearchModel,
+        ResultView,
+        SearchView
     }) {
+        /* Binds Event with controller handler */
+
         const handler = handleSearch;
         let button = document.querySelector('custom-search').shadowRoot.querySelector('#searchBtn');
         button.addEventListener('click', e => {

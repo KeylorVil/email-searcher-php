@@ -1,20 +1,19 @@
 export default class Controller {
-    constructor
-        ({
-            SearchView = 0,
-            CardsView = 0,
-            CardsModel = 0,
-            NavView = 0,
-            SearchModel = 0,
-            ResultView = 0
-        }) {
-            this.SearchView = SearchView;
-            this.CardsView = CardsView;
-            this.CardsModel = CardsModel;
-            this.NavView = NavView;
-            this.SearchModel = SearchModel;
-            this.ResultView = ResultView;
-        }
+    constructor({
+        SearchView,
+        CardsView,
+        CardsModel,
+        NavView,
+        SearchModel,
+        ResultView
+    }) {
+        this.SearchView = SearchView;
+        this.CardsView = CardsView;
+        this.CardsModel = CardsModel;
+        this.NavView = NavView;
+        this.SearchModel = SearchModel;
+        this.ResultView = ResultView;
+    }
 
     async init() {
         let data = await this.CardsModel.getData();
@@ -27,12 +26,15 @@ export default class Controller {
         }
         this.SearchView.init(formText);
         this.CardsView.init(data);
+
+        /* destructuring this */
         const {
             handleSearch,
             SearchModel,
             ResultView,
             SearchView
         } = this;
+        /* sends model and views because handleSearch is losing scope of "this" */
         this.SearchView.bindSearch({
             handleSearch,
             SearchModel,
@@ -42,10 +44,10 @@ export default class Controller {
     }
 
     async handleSearch({
-        email = 0,
-        SearchModel = 0,
-        ResultView = 0,
-        SearchView = 0
+        email,
+        SearchModel,
+        ResultView,
+        SearchView
     }) {
         let data = await SearchModel.getData(email);
         let formText = {
