@@ -3,12 +3,12 @@ import Nav from './components/Nav.js';
 import Card from './components/Card.js';
 import Search from './components/Search.js';
 import Result from './components/Result.js';
+import Loader from './components/Loader.js';
 
 /* MVC */
 import NavView from './views/NavView.js';
 import SearchView from './views/SearchView.js';
 import CardsView from './views/CardsView.js';
-import ResultView from './views/ResultView.js';
 import CardsModel from './models/CardsModel.js';
 import SearchModel from './models/SearchModel.js';
 import Controller from './controllers/Controller.js';
@@ -21,11 +21,12 @@ customElements.define('custom-nav', Nav);
 customElements.define('custom-search', Search)
 /* email search result custom element */
 customElements.define('custom-result', Result);
+/* loader custom element */
+customElements.define('custom-loader', Loader);
 
 const searchView = new SearchView();
 const navView = new NavView();
 const cardsView = new CardsView();
-const resultView = new ResultView();
 const cardsModel = new CardsModel();
 const searchModel = new SearchModel();
 const controller = new Controller({
@@ -33,7 +34,6 @@ const controller = new Controller({
     CardsView: cardsView,
     CardsModel: cardsModel,
     NavView: navView,
-    SearchModel: searchModel,
-    ResultView: resultView
+    SearchModel: searchModel
 });
 controller.init();

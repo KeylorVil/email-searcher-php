@@ -1,18 +1,19 @@
+import ResultView from '../views/ResultView.js';
+import LoaderView from '../views/LoaderView.js';
+
 export default class Controller {
     constructor({
         SearchView,
         CardsView,
         CardsModel,
         NavView,
-        SearchModel,
-        ResultView
+        SearchModel
     }) {
         this.SearchView = SearchView;
         this.CardsView = CardsView;
         this.CardsModel = CardsModel;
         this.NavView = NavView;
         this.SearchModel = SearchModel;
-        this.ResultView = ResultView;
     }
 
     async init() {
@@ -31,31 +32,36 @@ export default class Controller {
         const {
             handleSearch,
             SearchModel,
-            ResultView,
-            SearchView
+            SearchView,
+            CardsView
         } = this;
         /* sends model and views because handleSearch is losing scope of "this" */
         this.SearchView.bindSearch({
             handleSearch,
             SearchModel,
-            ResultView,
-            SearchView
+            SearchView,
+            CardsView
         });
     }
 
     async handleSearch({
         email,
         SearchModel,
-        ResultView,
         SearchView
     }) {
+        /* Loader */
+        let loaderView = new LoaderView();
+        loaderView.init();
+        /* Request API */
         let data = await SearchModel.getData(email);
+        /* Search section new copy */
         let formText = {
             title: "Can’t Find The Right Person?",
             span: "Try Again",
             text: " - Make a new search"
         }
         SearchView.setText(formText);
-        ResultView.init(data);
+        new ResultView().init(data);
+        loaderView.clean();
     }
 }

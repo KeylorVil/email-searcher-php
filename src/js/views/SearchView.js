@@ -18,7 +18,6 @@ export default class SearchView {
     bindSearch({
         handleSearch,
         SearchModel,
-        ResultView,
         SearchView
     }) {
         /* Binds Event with controller handler */
@@ -35,10 +34,12 @@ export default class SearchView {
                 let email = {
                     email: emailText
                 };
+                /* cleans input */
+                document.querySelector('custom-search').shadowRoot.querySelector('#emailInput').value = "";
+                /* Send necesarry models and views because the handler is losing scope this on Controller */
                 handler({
                     email,
                     SearchModel,
-                    ResultView,
                     SearchView
                 });
             } else {
