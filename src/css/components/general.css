@@ -11,3 +11,7 @@ h1 {
     font-family: var(--default-font);
     font-weight: bold;
 }
+
+span {
+    color: var(--span-color);
+}

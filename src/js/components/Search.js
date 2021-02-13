@@ -1,6 +1,10 @@
 export default class Search extends HTMLElement {
     /* search web component */
 
+    static get observedAttributes() {
+        return ['title', 'span', 'text'];
+    }
+
     constructor() {
         super();
     }
@@ -32,8 +36,8 @@ export default class Search extends HTMLElement {
 
         _template.innerHTML = `
         <div class="top-text">
-            <h1>Search Any Email Address</h1>
-            <p><span>Start Here</span> - Look up the owner's name, photos and online profiles. See what you find!</p>
+            <h1 id="searchTitle">${this.getAttribute('title')}</h1>
+            <p id="searchText"><span>${this.getAttribute('span')}</span>${this.getAttribute('text')}</p>
         </div>
         <div class="input-section">
             <div class="form">

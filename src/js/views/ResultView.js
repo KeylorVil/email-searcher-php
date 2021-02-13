@@ -12,7 +12,6 @@ export default class ResultView {
         cards.innerHTML = '';
 
         let foo = document.createElement('custom-result');
-        console.log(data);
         foo.setAttribute('info', JSON.stringify(data));
         result.appendChild(foo);
     }
