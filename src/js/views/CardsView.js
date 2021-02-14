@@ -15,6 +15,7 @@ export default class CardsView {
         cards.appendChild(title);
         cards.appendChild(text);
         cards.appendChild(this.createCards(data));
+        cards.style.display = "flex";
     }
 
     createCards(data) {

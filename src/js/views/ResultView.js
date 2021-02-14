@@ -14,5 +14,6 @@ export default class ResultView {
         let foo = document.createElement('custom-result');
         foo.setAttribute('info', JSON.stringify(data));
         result.appendChild(foo);
+        result.style.display = "flex";
     }
 }
