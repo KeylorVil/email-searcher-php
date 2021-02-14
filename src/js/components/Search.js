@@ -40,14 +40,14 @@ export default class Search extends HTMLElement {
             <p id="searchText"><span>${this.getAttribute('span')}</span>${this.getAttribute('text')}</p>
         </div>
         <div class="input-section">
-            <div class="form">
+            <form id="searchForm">
                 <div class="input-div">
                     <input id="emailInput" class="input-text" type="text" placeholder="email">
                     <label id="labelInput" for="emailInput" class="input-label">email</label>
                     <label id="errorLabel" for="emailInput">Please add a valid email address</label>
                 </div>
-                <input id="searchBtn" type="button" value="go!">
-            </div>
+                <button id="searchBtn" type="submit">go!</button>
+            </form>
             <div class="bottom-text">
                 <img class="icon" src="./src/img/icons/icon_lock.png" alt="lock">
                 <p>Enter Any Email Address. They won't be notified</p>

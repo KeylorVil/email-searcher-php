@@ -11,7 +11,7 @@
     text-align: center;
 }
 
-.main #cards>p  {
+.main #cards>p, .main #result>p  {
     color: #4A4A4A;
     letter-spacing: 0;
     line-height: 28px;
@@ -27,7 +27,7 @@
         font-size: 38px;
     }
 
-    .main #cards>p  {
+    .main #cards>p, .main #result>p  {
         margin-top: 15px;
     }
 
@@ -76,7 +76,7 @@
         font-size: 48px;
     }
 
-    .main #cards>p  {
+    .main #cards>p, .main #result>p  {
         margin-top: 20px;
         font-size: 20px;
         max-width: 718px;
@@ -101,7 +101,7 @@
         font-size: 52px;
     }
 
-    .main #cards>p  {
+    .main #cards>p, .main #result>p  {
         margin-top: 20px;
         font-size: 22px;
         max-width: 980px;

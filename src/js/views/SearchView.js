@@ -33,9 +33,9 @@ export default class SearchView {
     }) {
         /* Binds Event with controller handler */
         const handler = handleSearch;
-        let button = document.querySelector('custom-search').shadowRoot.querySelector('#searchBtn');
-        button.addEventListener('click', e => {
-            e.preventDefault;
+        let form = document.querySelector('custom-search').shadowRoot.querySelector('#searchForm');
+        form.addEventListener('submit', e => {
+            e.preventDefault();
             let emailText = document.querySelector('custom-search').shadowRoot.querySelector('#emailInput').value;
             if (emailText !== '' && this.validateEmail(emailText)) {
                 document.querySelector('custom-search').shadowRoot.querySelector('#emailInput').classList.remove('error');
