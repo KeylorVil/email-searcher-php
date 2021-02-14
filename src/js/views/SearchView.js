@@ -15,13 +15,23 @@ export default class SearchView {
         search.appendChild(searchForm);
     }
 
+    hide() {
+        const search = window.search;
+        search.style.display = "none";
+    }
+
+    show() {
+        const search = window.search;
+        search.style.display = "block";
+    }
+
     bindSearch({
         handleSearch,
         SearchModel,
-        SearchView
+        SearchView,
+        CardsView
     }) {
         /* Binds Event with controller handler */
-
         const handler = handleSearch;
         let button = document.querySelector('custom-search').shadowRoot.querySelector('#searchBtn');
         button.addEventListener('click', e => {
@@ -40,7 +50,8 @@ export default class SearchView {
                 handler({
                     email,
                     SearchModel,
-                    SearchView
+                    SearchView,
+                    CardsView
                 });
             } else {
                 document.querySelector('custom-search').shadowRoot.querySelector('#emailInput').classList.add('error');

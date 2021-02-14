@@ -47,8 +47,11 @@ export default class Controller {
     async handleSearch({
         email,
         SearchModel,
-        SearchView
+        SearchView,
+        CardsView
     }) {
+        /* Hide search section */
+        SearchView.hide();
         /* Loader */
         let loaderView = new LoaderView();
         loaderView.init();
@@ -62,6 +65,7 @@ export default class Controller {
         }
         SearchView.setText(formText);
         new ResultView().init(data);
+        SearchView.show();
         loaderView.clean();
     }
 }

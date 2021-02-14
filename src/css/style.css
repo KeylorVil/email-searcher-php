@@ -44,6 +44,7 @@ h1 {
 
 #loader {
     display: none;
+    max-height: 100vh;
     position: absolute;
     justify-content: center;
     align-items: center;
