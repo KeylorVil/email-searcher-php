@@ -1,5 +1,5 @@
 .loader {
-    border: 10px solid #F6BC25;
+    border: 10px solid var(--default-yellow);
     border-top: 10px solid transparent;
     border-radius: 50%;
     width: 120px;
@@ -8,6 +8,11 @@
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

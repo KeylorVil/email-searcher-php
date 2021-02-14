@@ -6,7 +6,7 @@ export default class Nav extends HTMLElement {
     }
 
     connectedCallback() {
-    /*called when the element is connected to the page*/
+        /*called when the element is connected to the page*/
         this.attachShadow({
             mode: 'open'
         });

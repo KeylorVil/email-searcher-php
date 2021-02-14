@@ -64,7 +64,7 @@ export default class Result extends HTMLElement {
         circle.appendChild(img);
         iconDiv.appendChild(circle);
     }
-    
+
     resultTopInfo(data, infoDiv) {
         // Create Elements
         let nameElem = document.createElement('h2');
@@ -76,7 +76,7 @@ export default class Result extends HTMLElement {
         infoDiv.appendChild(nameElem);
         infoDiv.appendChild(descriptionElem);
     }
-    
+
     firstColInfo(data, row) {
         // Create Elements
         let firstCol = document.createElement('div');
@@ -100,7 +100,7 @@ export default class Result extends HTMLElement {
         firstCol.appendChild(emailElem);
         row.appendChild(firstCol);
     }
-    
+
     secondColInfo(data, row) {
         // Create Elements
         let secondCol = document.createElement('div');

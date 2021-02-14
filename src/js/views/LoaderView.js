@@ -1,5 +1,5 @@
 export default class LoaderView {
-    
+
     init() {
         this.render();
     }

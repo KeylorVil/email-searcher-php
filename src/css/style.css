@@ -19,13 +19,17 @@
     font-display: swap;
 }
 
+/* Global CSS variables (apply on Shadow Dom too) */
 :root {
     --default-font: helveticaneue;
-    --span-color: #F6BC25;
-    --nav-background-color: #004A80;
-    --cards-background-color: #004A80;
-    --title-color: #004A80;
-    --text-color: #000000;
+    --default-font-size: 18px;
+    --default-yellow: #F6BC25;
+    --light-yellow: #F2DA56;
+    --default-blue: #004A80;
+    --default-red: #DC0015;
+    --black: #000000;
+    --light-grey: #E6E6E6;
+    --white: #FFFFFF;
 }
 
 body {
@@ -34,7 +38,7 @@ body {
 }
 
 body p {
-    font-size: 18px;
+    font-size: var(--default-font-size);
 }
 
 h1 {
@@ -48,5 +52,5 @@ h1 {
     position: absolute;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
+    background-image: linear-gradient(0deg, var(--light-grey) 0%, var(--white) 100%);
 }

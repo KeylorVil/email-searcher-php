@@ -10,11 +10,11 @@ export default class ResultView {
         /* cleaning dom */
         result.innerHTML = '';
         cards.innerHTML = '';
-        
+
         let header = document.createElement('h1');
-        let text = document.createElement('p'); 
+        let text = document.createElement('p');
         /* checks if object is empty */
-        if(Object.keys(data).length === 0) {
+        if (Object.keys(data).length === 0) {
             header.innerHTML = '0 Results';
             text.innerHTML = 'Try starting a new search below';
         } else {

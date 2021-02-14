@@ -1,19 +1,19 @@
 /* General */
 .result {
     max-width: 100%;
-    background-color: #ffffff;
+    background-color: var(--white);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
     border-radius: 30px;
     border-radius: 30px;
 }
 
 .result .icon div {
-    background-color: #004A80;
+    background-color: var(--default-blue);
     border-radius: 50%;
 }
 
 .result .info>h2 {
-    color: #004A80;
+    color: var(--default-blue);
     font-weight: bold;
     letter-spacing: 0;
     font-size: 32px;
@@ -32,14 +32,14 @@
 }
 
 .result .info .row .col h3 {
-    color: #004A80;
+    color: var(--default-blue);
     font-weight: bold;
     letter-spacing: 0;
 }
 
 .result .info .row .col span {
     font-size: 16px;
-    color: #004A80;
+    color: var(--default-blue);
     letter-spacing: 0;
     line-height: 24px;
     font-weight: normal;
@@ -181,7 +181,7 @@
 
 
     .result .info p {
-        font-size: 18px;
+        font-size: var(--default-font-size);
     }
 
     .result .info>p {

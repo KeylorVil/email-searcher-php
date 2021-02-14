@@ -1,5 +1,5 @@
 .footer {
-    background-color: #ffffff;
+    background-color: var(--white);
     display: flex;
 }
 
@@ -12,7 +12,7 @@
 
 .footer>span {
     font-size: 14px;
-    color: #004A80;
+    color: var(--default-blue);
     letter-spacing: 0;
     font-weight: bold;
     white-space: nowrap;
