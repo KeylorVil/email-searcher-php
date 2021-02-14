@@ -24,8 +24,11 @@ export default class ResultView {
             resultElement.setAttribute('info', JSON.stringify(data));
             result.appendChild(resultElement);
         }
-        result.prepend(text);
-        result.prepend(header);
+        let textDiv = document.createElement('div');
+        textDiv.setAttribute('class', 'resultCopy');
+        textDiv.appendChild(header);
+        textDiv.appendChild(text);
+        result.prepend(textDiv);
         result.style.display = "flex";
     }
 }

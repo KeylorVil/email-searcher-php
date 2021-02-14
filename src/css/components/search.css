@@ -201,6 +201,10 @@
         margin-top: -4.2rem;
         margin-left: 0.7rem;
     }
+
+    .search-section .input-section #errorLabel {
+        position: relative;
+    }
 }
 
 /* Tablet & Desktop Shared */
