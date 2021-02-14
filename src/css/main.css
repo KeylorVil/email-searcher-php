@@ -21,6 +21,11 @@
     display: flex;
 }
 
+.main #result {
+    justify-content: center;
+    min-height: 50vh; 
+}
+
 /* Mobile */
 @media (min-width: 320px) and (max-width: 767px) {
     .main h1 {

@@ -75,7 +75,6 @@
 
 /* Mobile */
 @media (min-width: 320px) and (max-width: 480px) {
-
     main .result {
         max-width: 290px;
     }
