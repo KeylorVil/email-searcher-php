@@ -59,7 +59,7 @@ export default class Result extends HTMLElement {
         // Create Elements
         let circle = document.createElement('div');
         let img = document.createElement('img');
-        img.src = '/src/img/icons/icon_person.png';
+        img.src = '/dist/img/icons/icon_person.png';
         // Append elements
         circle.appendChild(img);
         iconDiv.appendChild(circle);

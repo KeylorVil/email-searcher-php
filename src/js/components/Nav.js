@@ -29,10 +29,10 @@ export default class Nav extends HTMLElement {
         const _template = document.createElement('div');
         _template.setAttribute('class', 'nav');
         _template.innerHTML = `
-        <a href="/"><img class="logo" src="/src/img/icons/logo.png" alt="logo"></a>
+        <a href="/"><img class="logo" src="/dist/img/icons/logo.png" alt="logo"></a>
         <ul>
-            <li><a href="#"><img class="nav-icon first" src="/src/img/icons/icon_search.png" alt="search"></a></li>
-            <li><a href="#"><img class="nav-icon" src="/src/img/icons/icon_person.png" alt="person"></a></li>
+            <li><a href="#"><img class="nav-icon first" src="/dist/img/icons/icon_search.png" alt="search"></a></li>
+            <li><a href="#"><img class="nav-icon" src="/dist/img/icons/icon_person.png" alt="person"></a></li>
         </ul>
         `;
         return _template;
