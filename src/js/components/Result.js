@@ -20,9 +20,9 @@ export default class Result extends HTMLElement {
 
         /* Shadow dom style */
         _style.innerHTML = `
-        @import './src/css/reset.css';
-        @import './src/css/components/general.css';
-        @import './src/css/components/result.css';
+        @import './dist/css/reset.min.css';
+        @import './dist/css/general.min.css';
+        @import './dist/css/result.min.css';
         `;
 
         /* Append the card html and style to the shadowdom */
