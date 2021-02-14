@@ -20,9 +20,9 @@ export default class Search extends HTMLElement {
 
         /* Shadow dom style */
         _style.innerHTML = `
-            @import './dist/css/reset.min.css';
-            @import './dist/css/general.min.css';
-            @import './dist/css/search.min.css';
+            @import '/dist/css/reset.min.css';
+            @import '/dist/css/general.min.css';
+            @import '/dist/css/search.min.css';
             `;
 
         /* Append the card html and style to the shadowdom */
@@ -49,7 +49,7 @@ export default class Search extends HTMLElement {
                 <button id="searchBtn" type="submit">go!</button>
             </form>
             <div class="bottom-text">
-                <img class="icon" src="./src/img/icons/icon_lock.png" alt="lock">
+                <img class="icon" src="/src/img/icons/icon_lock.png" alt="lock">
                 <p>Enter Any Email Address. They won't be notified</p>
             </div>
         </div>

@@ -1,5 +1,5 @@
-import ResultView from '../views/ResultView.js';
-import LoaderView from '../views/LoaderView.js';
+import ResultView from '/dist/js/views/ResultView.min.js';
+import LoaderView from '/dist/js/views/LoaderView.min.js';
 
 export default class Controller {
     /* receives views and models as objects so it doesn't matter the order */

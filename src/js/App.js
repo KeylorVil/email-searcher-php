@@ -1,20 +1,20 @@
 /* Web Components */
-import Nav from './components/Nav.js';
-import Card from './components/Card.js';
-import Search from './components/Search.js';
-import Result from './components/Result.js';
-import Loader from './components/Loader.js';
-import Footer from './components/Footer.js';
+import Nav from '/dist/js/components/Nav.min.js';
+import Card from '/dist/js/components/Card.min.js';
+import Search from '/dist/js/components/Search.min.js';
+import Result from '/dist/js/components/Result.min.js';
+import Loader from '/dist/js/components/Loader.min.js';
+import Footer from '/dist/js/components/Footer.min.js';
 /* Views */
-import NavView from './views/NavView.js';
-import SearchView from './views/SearchView.js';
-import CardsView from './views/CardsView.js';
-import FooterView from './views/FooterView.js';
+import NavView from '/dist/js/views/NavView.min.js';
+import SearchView from '/dist/js/views/SearchView.min.js';
+import CardsView from '/dist/js/views/CardsView.min.js';
+import FooterView from '/dist/js/views/FooterView.min.js';
 /* Models */
-import CardsModel from './models/CardsModel.js';
-import SearchModel from './models/SearchModel.js';
+import CardsModel from '/dist/js/models/CardsModel.min.js';
+import SearchModel from '/dist/js/models/SearchModel.min.js';
 /* Controller */
-import Controller from './controllers/Controller.js';
+import Controller from '/dist/js/controllers/Controller.min.js';
 
 /* cards custom element */
 customElements.define('custom-card', Card);

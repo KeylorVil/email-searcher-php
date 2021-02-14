@@ -1,7 +1,7 @@
 export default class CardsModel {
     /* fetch JSON with Cards title's and description's texts */
     async fetchCardsData() {
-        const response = await fetch('./src/json/cards.json')
+        const response = await fetch('/dist/json/cards.json')
             .then(response => response.json())
         return response;
     }
