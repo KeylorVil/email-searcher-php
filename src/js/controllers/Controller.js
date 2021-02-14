@@ -2,23 +2,26 @@ import ResultView from '../views/ResultView.js';
 import LoaderView from '../views/LoaderView.js';
 
 export default class Controller {
+    /* receives views and models as objects so it doesn't matter the order */
     constructor({
         SearchView,
         CardsView,
         CardsModel,
         NavView,
-        SearchModel
+        SearchModel,
+        FooterView
     }) {
         this.SearchView = SearchView;
         this.CardsView = CardsView;
         this.CardsModel = CardsModel;
         this.NavView = NavView;
         this.SearchModel = SearchModel;
+        this.FooterView = FooterView;
     }
 
+    /* Initialization */
     async init() {
         let data = await this.CardsModel.getData();
-        // let foo = await this.SearchModel.getData({email: "doesmith@example.com"});
         this.NavView.init();
         let formText = {
             title: "Search Any Email Address",
@@ -27,8 +30,9 @@ export default class Controller {
         }
         this.SearchView.init(formText);
         this.CardsView.init(data);
+        this.FooterView.init();
 
-        /* destructuring this */
+        /* destructuring "this." */
         const {
             handleSearch,
             SearchModel,
