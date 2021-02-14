@@ -11,6 +11,7 @@ export default class Nav extends HTMLElement {
             mode: 'open'
         });
 
+        /* I tried using src/image/loading_spinner.gif but since it's not transparent it looks bad */
         const _template = document.createElement('div');
         _template.setAttribute('class', 'loader')
         const _style = document.createElement('style');

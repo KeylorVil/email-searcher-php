@@ -1,6 +1,6 @@
 .loader {
     border: 10px solid #F6BC25;
-    border-top: 10px solid #fff;
+    border-top: 10px solid transparent;
     border-radius: 50%;
     width: 120px;
     height: 120px;

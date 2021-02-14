@@ -65,7 +65,7 @@ export default class Controller {
         }
         SearchView.setText(formText);
         new ResultView().init(data);
-        SearchView.show();
         loaderView.clean();
+        SearchView.show();
     }
 }
