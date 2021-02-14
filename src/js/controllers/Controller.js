@@ -54,8 +54,9 @@ export default class Controller {
         SearchView,
         CardsView
     }) {
-        /* Hide search section */
+        /* Hide search and cards section */
         SearchView.hide();
+        CardsView.hide();
         /* Loader */
         let loaderView = new LoaderView();
         loaderView.init();

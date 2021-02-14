@@ -18,6 +18,16 @@ export default class CardsView {
         cards.style.display = "flex";
     }
 
+    hide() {
+        const cards = window.cards;
+        cards.style.display = "none";
+    }
+
+    show() {
+        const cards = window.cards;
+        cards.style.display = "block";
+    }
+
     createCards(data) {
         /* Create HTML for cards */
         let cards = document.createElement('div');
