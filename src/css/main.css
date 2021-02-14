@@ -14,7 +14,7 @@
 
 .main #cards>p,
 .main #result>p {
-    color: #4A4A4A;
+    color: var(--dark-grey);
     letter-spacing: 0;
     line-height: 28px;
 }
