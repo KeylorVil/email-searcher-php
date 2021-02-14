@@ -55,3 +55,9 @@ h1 {
     align-items: center;
     background-image: linear-gradient(0deg, var(--light-grey) 0%, var(--white) 100%);
 }
+
+custom-loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
