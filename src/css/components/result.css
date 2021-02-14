@@ -86,8 +86,8 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
     .result {
-        margin-top: 8px;
-        margin-bottom: 8px;
+        margin-top: 15px;
+        margin-bottom: 15px;
         padding: 25px 15px 25px 15px;
     }
 }
