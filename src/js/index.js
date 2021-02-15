@@ -31,6 +31,7 @@ domReady(function() {
     scripts.forEach(function (src) {
         let asset = document.createElement('script');
         asset.src = src;
+        asset.type = 'type';
         document.head.appendChild(asset);
     });
 });
