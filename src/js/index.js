@@ -18,20 +18,11 @@ domReady(function() {
     // const scripts = [
     //     '/src/js/App.js',
     // ];
-    const scripts = [
-        '/dist/js/App.min.js?v1.0',
-    ];
     stylesheets.forEach(function(src) {
         let asset = document.createElement('link');
         asset.type = "text/css";
         asset.rel = "stylesheet";
         asset.href = src;
-        document.head.appendChild(asset);
-    });
-    scripts.forEach(function (src) {
-        let asset = document.createElement('script');
-        asset.src = src;
-        asset.type = "module";
         document.head.appendChild(asset);
     });
 });
