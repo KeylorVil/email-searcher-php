@@ -17,12 +17,21 @@ domReady(function() {
     // Non-minified paths || switch with below's array
     // const scripts = [
     //     '/src/js/App.js',
-    // ];   
+    // ];
+    const scripts = [
+        '/dist/js/App.min.js?v1.0',
+    ];
     stylesheets.forEach(function(src) {
         let asset = document.createElement('link');
         asset.type = "text/css";
         asset.rel = "stylesheet";
         asset.href = src;
+        document.head.appendChild(asset);
+    });
+    scripts.forEach(function (src) {
+        let asset = document.createElement('script');
+        asset.type = "module"
+        asset.src = src;
         document.head.appendChild(asset);
     });
 });
