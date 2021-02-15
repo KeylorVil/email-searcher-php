@@ -28,6 +28,10 @@
     min-height: 50vh;
 }
 
+.main #result .resultCopy > p{
+    margin-top: 15px;
+}
+
 /* Mobile */
 @media (min-width: 320px) and (max-width: 767px) {
     .main h1 {
