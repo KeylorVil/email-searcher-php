@@ -17,7 +17,7 @@ domReady(function() {
     // Non-minified paths || switch with below's array
     // const scripts = [
     //     '/src/js/App.js',
-    // ];
+    // ];   
     stylesheets.forEach(function(src) {
         let asset = document.createElement('link');
         asset.type = "text/css";
